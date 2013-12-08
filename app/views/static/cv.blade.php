@@ -190,10 +190,17 @@
                 'method' => 'POST'
             )) }}
 
+            <!-- -- Error Handling -->
+            <ul class="errors">
+              @foreach($errors->all() as $message)
+                <li>{{ $message }}</li>
+              @endforeach
+            </ul>
+
             <div class="control-group">
               <div class="controls">
                 <input type="text" class="form-control" 
-                  placeholder="Full Name" id="name" required 
+                  placeholder="Full Name" id="name" name="name" required 
                   data-validation-required-message="Please enter your name">
 
                 <p class="help-block"></p>
@@ -202,7 +209,7 @@
             <div class="control-group">
               <div class="controls">
                   <input type="email" class="form-control" 
-                  placeholder="Email" id="email" required 
+                  placeholder="Email" id="email" name="email" required 
                   data-validation-required-message="Please enter your email">
 
                   <p class="help-block"></p>
@@ -212,7 +219,7 @@
             <div class="control-group">
               <div class="controls">
                 <textarea rows="10" cols="100" class="form-control" 
-                  placeholder="Message" id="message" required
+                  placeholder="Message" id="message" name="message" required
                   data-validation-required-message="Please enter your message" minlength="5" 
                   data-validation-minlength-message="Min 5 characters" 
                   maxlength="999" style="resize:none">

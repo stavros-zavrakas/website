@@ -24,6 +24,23 @@ class HomeController extends BaseController {
 	}
 
 	public function contact() {
-		
+		// Fetch all request data.
+		$data = Input::all();
+
+		// Build the validation constraint set.
+		$rules = array(
+			'name' => 'alpha_num|min:5',
+			'email' => 'email',
+			'message' => 'min:15'
+		);
+
+		// Create a new validator instance
+		$validator = Validator::make($data, $rules);
+
+		if ($validator->passes()) {
+			// We have to send the e-mail(s).
+			return 'Data was saved.';
+		}
+		return Redirect::to('/cv')->withErrors($validator);
 	}
 }
