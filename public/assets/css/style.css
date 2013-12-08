@@ -1,0 +1,167 @@
+  /*
+  |--------------------------------------------------------------------------
+  | Stavros Zavrakas theme
+  |--------------------------------------------------------------------------
+  |
+  | Copyright 2013
+  | Licensed under the Apache License v2.0
+  | http://stavros.zavrakas.gr;
+  |
+  */
+
+  * {
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+  }
+
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body { background: url(../images/bg1.png); }
+  hr { border: 0 none; border-bottom: 3px dashed #999; }
+  h3.text-muted { padding-left: 20px; }
+
+  .clear { clear: both;}
+
+  /*
+  |--------------------------------------------------------------------------
+  | Main content - wrapper
+  |--------------------------------------------------------------------------
+  */
+
+  /* Wrapper for page content to push down footer */
+  #wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -100px;
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | Left content
+  |--------------------------------------------------------------------------
+  */
+  .col-md-3-custom { height: 100%; }
+
+  .col-md9-shadow {
+    -webkit-box-shadow: -10px 0px 30px rgba(50, 50, 50, 0.25);
+    -moz-box-shadow:    -10px 0px 30px rgba(50, 50, 50, 0.25);
+    box-shadow:         -10px 0px 30px rgba(50, 50, 50, 0.25);
+  }
+
+  .shadow { text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.15); }
+
+  .personal-data h2{
+    border-bottom: 2 solid black;
+  }
+
+  .header *{ display: inline-block; }
+  .header   { text-align: left; }
+  .header i { margin-left: 15px; }
+
+  .position {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #333;
+  }
+
+  #frame {
+    background: url(../images/frame.jpg) no-repeat;
+    width: 210px;
+    height: 255px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | Right content
+  |--------------------------------------------------------------------------
+  */
+  .col-md-9-custom {
+    background-color: #eeeeee;
+  }
+
+  .tag { 
+    height: 55px; 
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px #444;
+    position: relative;
+    left: -30px;
+    padding: 8px 0px 0px 20px;
+  }
+
+  .blue-tag { background: url(../images/blue-trans.png) no-repeat; }
+  .green-tag { background: url(../images/green-trans.png) no-repeat; }
+  .pink-tag { background: url(../images/pink-trans.png) no-repeat; }
+  .orange-tag { background: url(../images/orange-trans.png) no-repeat; }
+
+  .skills {
+    min-width: 235px;
+    min-height: 255px;
+  }
+
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+    height: 110px;
+  }
+  #footer {
+    background-color: #e9e2d4;
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: 1px solid #DDDDDD;
+  }
+
+  /*
+  |--------------------------------------------------------------------------
+  | Responsive rules
+  |--------------------------------------------------------------------------
+  */
+  @media screen and (max-width: 400px) { 
+    .col-md-3-custom { height:auto; padding: 10px 0px 10px 0px; }
+    .skills { min-height: inherit; }
+    .personal-data { width: 250px; margin: 0 auto; margin-bottom: 10px; }
+  }
+
+
+  @media (min-width: 400px) and (max-width: 767px) { 
+    .col-md-3-custom { height:auto; padding: 10px 0px 10px 0px; }
+    .skills { min-height: inherit; }
+    .personal-data { width: 250px; margin: 0 auto; margin-bottom: 10px; }
+  }
+
+  @media (max-width: 767px) {
+  /*  #footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }*/
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) { 
+    .col-md-3-custom { height:auto; }
+
+  }
+
+  @media (min-width: 992px) {
+
+  }
+
+  @media (min-width: 1200px) {
+
+  }
