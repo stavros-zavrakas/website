@@ -132,6 +132,17 @@
   | Responsive rules
   |--------------------------------------------------------------------------
   */
+  ul.errors {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
+  /*
+  |--------------------------------------------------------------------------
+  | Responsive rules
+  |--------------------------------------------------------------------------
+  */
   @media screen and (max-width: 400px) { 
     .col-md-3-custom { height:auto; padding: 10px 0px 10px 0px; }
     .skills { min-height: inherit; }

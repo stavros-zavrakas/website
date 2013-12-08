@@ -193,7 +193,7 @@
             <!-- -- Error Handling -->
             <ul class="errors">
               @foreach($errors->all() as $message)
-                <li>{{ $message }}</li>
+                <li class="alert-danger">{{ $message }}</li>
               @endforeach
             </ul>
 
@@ -220,10 +220,9 @@
               <div class="controls">
                 <textarea rows="10" cols="100" class="form-control" 
                   placeholder="Message" id="message" name="message" required
-                  data-validation-required-message="Please enter your message" minlength="5" 
+                  data-validation-required-message="Please enter your message" minlength="15" 
                   data-validation-minlength-message="Min 5 characters" 
-                  maxlength="999" style="resize:none">
-                </textarea>
+                  maxlength="999" style="resize:none"></textarea>
 
                 <p class="help-block"></p>
               </div>
