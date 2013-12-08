@@ -16,6 +16,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/cv', function(){
-    return View::make('layouts.master');
-});
+Route::get('/cv', 'HomeController@CV');

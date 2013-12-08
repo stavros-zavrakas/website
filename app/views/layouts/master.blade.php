@@ -11,7 +11,9 @@
     <div id="wrap" class="container">
       <div class="row">
         <div class="col-md-3 col-md-3-custom">
-          <h1 class="shadow text-center">Stavros Zavrakas</h1>
+          <h1 class="shadow text-center">
+            <a href="{{ URL::action('HomeController@CV') }}">Stavros Zavrakas</a>
+          </h1>
 
           <!-- frame for the personal photo-->
           <a href="#" data-toggle="modal" data-target="#myModal">
@@ -163,7 +165,7 @@
     </div> <!-- end of container -->
     <div id="footer">
       <div class="container">
-        <br><br><p class="text-muted text-center">&copy; 2013 <a href="http://stavros.zavrakas.gr">Stavros Zavrakas</a>.</p>
+        <br><br><p class="text-muted text-center"><strong>&copy;{{ strftime("%Y"); }} <a href="{{ URL::action('HomeController@CV') }}">Stavros Zavrakas</a>.</strong></p>
       </div>
     </div> <!-- end footer -->
 
