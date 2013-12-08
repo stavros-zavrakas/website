@@ -104,63 +104,6 @@
               <tr><td>Software Project Management  </td>    <td>                       </td></tr>
             </table>
           </div>
-
-
-        <!--
-          <div class="skills pull-left">
-            <div class="skills">
-              <h2>Programming</h2>
-              <ul>
-                <li><strong>CSS</strong></li>
-                <li><strong>CSS3</strong></li>
-                <li><strong>HTML</strong></li>
-                <li><strong>HTML5</strong></li>
-                <li><strong>jQuery</strong></li>
-                <li><strong>JavaScript</strong></li>
-                <li><strong>PHP</strong></li>
-                <li><strong>Laravel</strong></li>
-                <li><strong>REST</strong></li>
-                <li><strong>Web Applications</strong></li>
-              </ul>
-            </div>
-            <div class="skills">
-              <h2>Programming</h2>
-              <ul>
-                <li><strong>Bootstrap</strong></li>
-                <li><strong>Drupal</strong></li>
-                <li><strong>nodeJS</strong></li>
-                <li><strong>mongoDB</strong></li>
-                <li><strong>Git</strong></li>
-                <li><strong>MySql</strong></li>
-                <li><strong>MVC</strong></li>
-                <li><strong>C</strong></li>
-                <li><strong>Java</strong></li>
-              </ul>
-            </div>
-          </div>
-          <div class="pull-left">
-            <div class="skills">
-              <h2>Leadership</h2>
-              <ul>
-                <li><strong>Leadership</strong></li>
-                <li><strong>Agile Methodologies</strong></li>
-                <li><strong>Scrum</strong></li>
-                <li><strong>Refactoring</strong></li>
-                <li><strong>Software Project Management</strong></li>
-              </ul>
-            </div>
-            <div class="skills">
-              <h2>Languages</h2>
-              <ul>
-                <li><strong>Greek</strong> - Mother Tongue </li>
-                <li><strong>English</strong> - Fluent </li>
-                <li><strong>Italian</strong> - Beginner</li>
-              </ul>
-            </div>
-          </div>
-        -->
-
-
           <div class="clear"></div>
 
           <!-- Third Label - Education -->
