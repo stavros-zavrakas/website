@@ -22,6 +22,6 @@ class HomeController extends BaseController {
 
 	public function CV()
 	{
-		return View::make('layouts.master');
+		return View::make('static.cv');
 	}
 }
