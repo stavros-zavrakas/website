@@ -52,6 +52,7 @@
   | Left content
   |--------------------------------------------------------------------------
   */
+  .col-md-3-custom h1{ font-size: 32px; }
   .col-md-3-custom { height: 100%; }
 
   .col-md9-shadow {
