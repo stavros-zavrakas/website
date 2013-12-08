@@ -22,4 +22,8 @@ class HomeController extends BaseController {
 	public function CV() {
 		return View::make('static.cv');
 	}
+
+	public function contact() {
+		
+	}
 }

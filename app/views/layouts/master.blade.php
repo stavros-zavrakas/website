@@ -33,9 +33,7 @@
     <script src="{{ asset('assets/js/libs/bootstrap.min.js') }}"></script>
     @section('jshook-after')
 
-    <!-- -----------------------------
-      Modals Start
-    ------------------------------ -->
+    <!--  Modals Start -->
     <div id="modals">
       @section('modals')
 

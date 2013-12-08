@@ -17,3 +17,4 @@ Route::get('/', function()
 });
 
 Route::get('/cv', 'HomeController@CV');
+Route::post('/contact', 'HomeController@contact');

@@ -184,13 +184,17 @@
           <h4 class="modal-title" id="myModalLabel">Contact me</h4>
         </div>
         <div class="modal-body">
-         <!-- Form itself -->
-          <form name="sentMessage" class="well" id="contactForm" novalidate>
+           <!-- Form itself -->
+           {{ Form::open(array(
+                'action' => 'HomeController@contact',
+                'method' => 'POST'
+            )) }}
+
             <div class="control-group">
               <div class="controls">
                 <input type="text" class="form-control" 
                   placeholder="Full Name" id="name" required 
-                  data-validation-required-message="Please enter your name" />
+                  data-validation-required-message="Please enter your name">
 
                 <p class="help-block"></p>
               </div>
@@ -199,7 +203,7 @@
               <div class="controls">
                   <input type="email" class="form-control" 
                   placeholder="Email" id="email" required 
-                  data-validation-required-message="Please enter your email" />
+                  data-validation-required-message="Please enter your email">
 
                   <p class="help-block"></p>
               </div>
@@ -213,15 +217,23 @@
                   data-validation-minlength-message="Min 5 characters" 
                   maxlength="999" style="resize:none">
                 </textarea>
+
+                <p class="help-block"></p>
               </div>
-            </div>                  
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <input id="email_copy" name="email_copy" type="checkbox" value="0">
+                <label for="email_copy"> Send me a copy of the message to my email address</label>
+              </div>                 
+            </div>                 
             <div id="success"> </div> <!-- For success/fail messages -->
             
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-primary pull-right">Send</button><br />
-          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-          </form>
+          {{ Form::close() }}
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
