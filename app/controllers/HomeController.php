@@ -53,7 +53,7 @@ class HomeController extends BaseController {
 	                  <p><strong>Message: </strong> {$message} </p> 
 	                  <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";  
 			      
-			mail(to, subject, message)("st.zavrakas@gmail.com", "New Enquiry", $emailbody);
+			mail("st.zavrakas@gmail.com", "New Enquiry", $emailbody);
 
 			return 'Data was sent.';
 		}
