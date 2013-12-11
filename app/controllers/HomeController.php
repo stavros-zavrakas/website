@@ -38,22 +38,51 @@ class HomeController extends BaseController {
 		$validator = Validator::make($data, $rules);
 
 		if ($validator->passes()) {
-			// We have to send the e-mail(s).
-			$name = Input::get('name');
-			$email = Input::get('email');
-			$message = Input::get('message');
+			// Standard initialization
+			$toEmail = "st.zavrakas@gmail.com";
+			$toName = "Stavros Zavrakas";
 
-			$ipaddress = $_SERVER['REMOTE_ADDR'];  
-	    $date = date('d/m/Y');  
-	    $time = date('H:i:s'); 
+			$fromEmail = Input::get('email');
+			$fromName = Input::get('name');
+      $message = Input::get('message');
+
+      $ipaddress = $_SERVER['REMOTE_ADDR'];  
+      $date = date('d/m/Y');  
+      $time = date('H:i:s'); 
+      
+			$subject = "<p>You have recieved a new message from the enquiries form on your website.</p> 
+              <p><strong>Name: </strong> {$fromName} </p> 
+              <p><strong>Email Address: </strong> {$fromEmail} </p> 
+              <p><strong>Message: </strong> {$message} </p> 
+              <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
+
+	    Mail::send('emails.contact', $data, function($message) use ($toEmail, $toName, $fromEmail, $fromName, $subject) {
+        $message->to($toEmail, $toName);
+
+        $message->from($fromEmail, $fromName);
+
+        $message->subject($subject);
+    	});
+
+
+
+
+
+		// We have to send the e-mail(s).
+		// $name = Input::get('name');
+		// $email = Input::get('email');
+		// $message = Input::get('message');
 			
-			$emailbody = "<p>You have recieved a new message from the enquiries form on your website.</p> 
-	                  <p><strong>Name: </strong> {$name} </p> 
-	                  <p><strong>Email Address: </strong> {$email} </p> 
-	                  <p><strong>Message: </strong> {$message} </p> 
-	                  <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";  
+
+		// $emailbody = "<p>You have recieved a new message from the enquiries form on your website.</p> 
+	  //                 <p><strong>Name: </strong> {$name} </p> 
+	  //                 <p><strong>Email Address: </strong> {$email} </p> 
+	  //                 <p><strong>Message: </strong> {$message} </p> 
+	  //                 <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";  
 			      
-			mail("st.zavrakas@gmail.com", "New Enquiry", $emailbody);
+		// mail("st.zavrakas@gmail.com", "New Enquiry", $emailbody);
+
+
 
 			return 'Data was sent.';
 		}
