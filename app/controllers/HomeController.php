@@ -31,7 +31,8 @@ class HomeController extends BaseController {
 		$rules = array(
 			'name' => 'alpha_num|min:5',
 			'email' => 'email',
-			'message' => 'min:15'
+			'message' => 'min:15',
+			'recaptcha_response_field' => 'required|recaptcha',
 		);
 
 		// Create a new validator instance
@@ -64,28 +65,8 @@ class HomeController extends BaseController {
         $message->subject($subject);
     	});
 
-
-
-
-
-		// We have to send the e-mail(s).
-		// $name = Input::get('name');
-		// $email = Input::get('email');
-		// $message = Input::get('message');
-			
-
-		// $emailbody = "<p>You have recieved a new message from the enquiries form on your website.</p> 
-	  //                 <p><strong>Name: </strong> {$name} </p> 
-	  //                 <p><strong>Email Address: </strong> {$email} </p> 
-	  //                 <p><strong>Message: </strong> {$message} </p> 
-	  //                 <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";  
-			      
-		// mail("st.zavrakas@gmail.com", "New Enquiry", $emailbody);
-
-
-
 			return 'Data was sent.';
 		}
-		return Redirect::to('/cv')->withErrors($validator);
+		return Redirect::to('/')->withErrors($validator);
 	}
 }
