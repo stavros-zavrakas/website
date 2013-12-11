@@ -231,6 +231,8 @@
               <div class="controls">
                 <input id="email_copy" name="email_copy" type="checkbox" value="0">
                 <label for="email_copy"> Send me a copy of the message to my email address</label>
+
+                {{ Form::captcha() }}
               </div>                 
             </div>                 
             <div id="success"> </div> <!-- For success/fail messages -->
