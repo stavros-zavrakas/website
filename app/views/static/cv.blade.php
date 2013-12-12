@@ -8,7 +8,7 @@
       </h1>
 
       <!-- frame for the personal photo-->
-      <a href="#" data-toggle="modal" data-target="#myModal">
+      <a href="#photo" data-toggle="modal" data-target="#myModal">
         <div id="frame">
             <img src="{{ asset('assets/images/me.jpg') }}" alt="Stavros Zavrakas">
         </div>

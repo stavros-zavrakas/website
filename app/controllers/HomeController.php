@@ -32,7 +32,6 @@ class HomeController extends BaseController {
 			'name' => 'alpha_num|min:5',
 			'email' => 'email',
 			'message' => 'min:15',
-			'recaptcha_response_field' => 'required|recaptcha',
 		);
 
 		// Create a new validator instance
@@ -47,9 +46,9 @@ class HomeController extends BaseController {
 			$fromName = Input::get('name');
       $message = Input::get('message');
 
-      $ipaddress = $_SERVER['REMOTE_ADDR'];  
-      $date = date('d/m/Y');  
-      $time = date('H:i:s'); 
+      $data['ipaddress'] = $_SERVER['REMOTE_ADDR'];  
+      $data['date'] = date('d/m/Y');  
+      $data['time'] = date('H:i:s'); 
       
 			$subject = "<p>You have recieved a new message from the enquiries form on your website.</p> 
               <p><strong>Name: </strong> {$fromName} </p> 
@@ -57,12 +56,12 @@ class HomeController extends BaseController {
               <p><strong>Message: </strong> {$message} </p> 
               <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
 
-	    Mail::send('emails.contact', $data, function($message) use ($toEmail, $toName, $fromEmail, $fromName, $subject) {
-        $message->to($toEmail, $toName);
+	    Mail::send('emails.contact', $data, function($messageToSent) use ($toEmail, $toName, $fromEmail, $fromName) {
+        $messageToSent->to($toEmail, $toName);
 
-        $message->from($fromEmail, $fromName);
+        $messageToSent->from($fromEmail, $fromName);
 
-        $message->subject($subject);
+        $messageToSent->subject("New Enquiry from: stavros.zavrakas.gr");
     	});
 
 			return 'Data was sent.';
