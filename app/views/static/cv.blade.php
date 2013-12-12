@@ -53,6 +53,11 @@
           <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#contactModal">Contact me </button>
         </h3> 
       </div>
+      @if (!empty($mail_message))
+        <div class="alert alert-info">
+          {{ Session::get('mail_message') }}
+        </div>
+      @endif
       <!-- First Label - Work experience -->
       <h1 class="tag blue-tag">Previous employment</h1>
       <div class="header">

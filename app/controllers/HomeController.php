@@ -20,7 +20,10 @@ class HomeController extends BaseController {
 	}
 
 	public function CV() {
-		return View::make('static.cv');
+		$data = array();
+    $data['mail_message'] = Session::get('mail_message');
+
+		return View::make('static.cv')->with($data);
 	}
 
 	public function contact() {
@@ -59,7 +62,8 @@ class HomeController extends BaseController {
         $messageToSent->subject("New Enquiry from: stavros.zavrakas.gr");
     	});
 
-			return 'Data was sent.';
+	    return Redirect::to('/')->with('mail_message', 'You sent the mail succesfully');
+			// return 'Data was sent.';
 		}
 		return Redirect::to('/')->withErrors($validator);
 	}
