@@ -46,15 +46,10 @@ class HomeController extends BaseController {
 			$fromName = Input::get('name');
       $message = Input::get('message');
 
+      $data['body'] = Input::get('message');
       $data['ipaddress'] = $_SERVER['REMOTE_ADDR'];  
       $data['date'] = date('d/m/Y');  
       $data['time'] = date('H:i:s'); 
-      
-			$subject = "<p>You have recieved a new message from the enquiries form on your website.</p> 
-              <p><strong>Name: </strong> {$fromName} </p> 
-              <p><strong>Email Address: </strong> {$fromEmail} </p> 
-              <p><strong>Message: </strong> {$message} </p> 
-              <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
 
 	    Mail::send('emails.contact', $data, function($messageToSent) use ($toEmail, $toName, $fromEmail, $fromName) {
         $messageToSent->to($toEmail, $toName);
