@@ -8,7 +8,7 @@
       </h1>
 
       <!-- frame for the personal photo-->
-      <a href="#photo" data-toggle="modal" data-target="#myModal">
+      <a id="photo" href="#photo" data-toggle="modal" data-target="#myModal">
         <div id="frame">
             <img src="{{ asset('assets/images/me.jpg') }}" alt="Stavros Zavrakas">
         </div>
@@ -36,22 +36,32 @@
           20162 <br>
           Milano, Italy
         </h3>
+
+        <br>
+
+        <h2 class="shadow"><i class="glyphicon glyphicon-comment"></i> Social</h2>
+        <h3 class="text-muted"> 
+          Facebook, LinkedIn
+        </h3>
+        <div class="fb-like" data-href="http://stavros.zavrakas.gr" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
       </div>
     </div>
     <div class="col-md-9 col-md-9-custom col-md9-shadow">
       <div class="header">
         <h3 class="hidden">
           <i class="glyphicon glyphicon-floppy-save"></i>
-          <button type="button" class="btn btn-danger btn-lg" onclick="window.print()">Download CV</button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="window.print()">Download CV</button>
         </h3> 
         <h3 class="hidden-sm hidden-xs pull-left">
           <i class="glyphicon glyphicon glyphicon-print"></i>
-          <button type="button" class="btn btn-danger btn-lg" onclick="window.print()">Print CV</button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="window.print()">Print CV</button>
         </h3> 
         <h3>
           <i class="glyphicon glyphicon glyphicon-envelope"></i>
-          <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#contactModal">Contact me </button>
+          <!-- <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#contactModal">Contact me </button> -->
+          <a id="contact" href="#contact"><button type="button" class="btn btn-danger btn-sm contact" data-toggle="modal" data-target="#contactModal">Contact me </button></a>
         </h3> 
+
       </div>
       @if (!empty($mail_message))
         <div class="alert alert-info">

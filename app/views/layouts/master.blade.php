@@ -39,5 +39,46 @@
 
       @show
     </div>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=570897719614918";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>
+    $(document).ready(function() {
+      $("[href^='#']").click(function(e){
+        e.preventDefault();
+        window.location.hash = $(this).attr("id");
+      });
+
+      $(".close").click(function(e){
+        e.preventDefault();
+        window.location.hash = "";
+      });
+
+      var hashSegments = window.location.hash.replace(/%23/g,'#').split('#');
+      hashSegments.splice(0, 1);
+      console.log(hashSegments);
+
+      if (hashSegments.length > 0) {
+        // ModalManager.dismissAll();
+        ;
+      }
+
+      switch(hashSegments[0]) {
+        case 'photo':
+          $('#myModal').modal();
+          break;
+        case 'contact':
+          $('#contactModal').modal();
+          break;
+      }
+    });
+  </script>
   </body>
 </html>
