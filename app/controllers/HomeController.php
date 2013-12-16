@@ -65,6 +65,6 @@ class HomeController extends BaseController {
 	    return Redirect::to('/')->with('mail_message', 'You sent the mail succesfully');
 			// return 'Data was sent.';
 		}
-		return Redirect::to('/')->withErrors($validator);
+		return Redirect::to('/#contact')->withErrors($validator);
 	}
 }
