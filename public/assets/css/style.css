@@ -63,10 +63,9 @@
 
   .shadow { text-shadow: 1px 1px 0px #fff, 2px 2px 0px rgba(0,0,0,0.15); }
 
-  .personal-data h2{
-    border-bottom: 2 solid black;
-  }
-
+  .personal-data h2{ border-bottom: 2 solid black; }
+  .personal-data h3 { font-size: 20px; line-height: 30px; }
+  
   .header *{ display: inline-block; }
   .header   { text-align: left; }
   .header i { margin-left: 15px; }

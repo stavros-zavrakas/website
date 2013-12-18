@@ -20,8 +20,10 @@
       -->
       <div class="personal-data">
         <h2 class="shadow"><i class="glyphicon glyphicon-phone"></i> Phone</h2>
-        <h3 class="text-muted">+39 3898 478 918</h3>
-        <h3 class="text-muted">+30 6974 991 412</h3>
+        <h3 class="text-muted">
+          +39 3898 478 918 <br>
+          +30 6974 991 412
+        </h3>
 
         <!--
         <br>
@@ -69,11 +71,6 @@
         </h3> 
 
       </div>
-      @if (!empty($mail_message))
-        <div class="alert alert-info">
-          {{ Session::get('mail_message') }}
-        </div>
-      @endif
       <!-- First Label - Work experience -->
       <h1 class="tag blue-tag">Previous employment</h1>
       <div class="header">
@@ -211,7 +208,14 @@
                 'method' => 'POST'
             )) }}
 
-            <!-- -- Error Handling -->
+            <!-- Success email message -->
+            @if (!empty($mail_message))
+              <div class="alert alert-info">
+                {{ Session::get('mail_message') }}
+              </div>
+            @endif
+
+            <!-- Error Handling -->
             <ul class="errors">
               @foreach($errors->all() as $message)
                 <li class="alert-danger">{{ $message }}</li>
