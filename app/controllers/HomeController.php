@@ -62,9 +62,9 @@ class HomeController extends BaseController {
         $messageToSent->subject("New Enquiry from: stavros.zavrakas.gr");
     	});
 
-	    return Redirect::to('/#contact')->with('mail_message', 'You sent the mail succesfully');
+	    return Redirect::to('/#/contact')->with('mail_message', 'You sent the mail succesfully');
 			// return 'Data was sent.';
 		}
-		return Redirect::to('/#contact')->withErrors($validator);
+		return Redirect::to('/#/contact')->withErrors($validator);
 	}
 }
