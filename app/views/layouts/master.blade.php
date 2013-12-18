@@ -53,12 +53,12 @@
     $(document).ready(function() {
       $("[href^='#']").click(function(e){
         e.preventDefault();
-        window.location.hash = $(this).attr("id");
+        window.location.hash = '/' + $(this).attr("id");
       });
 
       $(".close").click(function(e){
         e.preventDefault();
-        window.location.hash = "";
+        window.location.hash = "/";
       });
 
       var hashSegments = window.location.hash.replace(/%23/g,'#').split('#');
@@ -67,14 +67,16 @@
 
       if (hashSegments.length > 0) {
         // ModalManager.dismissAll();
-        ;
       }
 
       switch(hashSegments[0]) {
-        case 'photo':
+        case '/':
+          // @todo: dismiss all modals
+          break;
+        case '/photo':
           $('#myModal').modal();
           break;
-        case 'contact':
+        case '/contact':
           $('#contactModal').modal();
           break;
       }
