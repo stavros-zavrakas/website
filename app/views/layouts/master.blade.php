@@ -45,7 +45,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=570897719614918";
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=124572021287";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -63,7 +63,6 @@
 
       var hashSegments = window.location.hash.replace(/%23/g,'#').split('#');
       hashSegments.splice(0, 1);
-      console.log(hashSegments);
 
       if (hashSegments.length > 0) {
         // ModalManager.dismissAll();
