@@ -57,9 +57,7 @@ class HomeController extends BaseController {
 	    Mail::send('emails.contact', $data, function($messageToSent) use ($toEmail, $toName, $fromEmail, $fromName) {
         $messageToSent->to($toEmail, $toName);
 
-        if(!empty($data['email_copy'])) {
-          $messageToSent->from($fromEmail, $fromName);
-        }
+        $messageToSent->from($fromEmail, $fromName);
         
         $messageToSent->subject("New Enquiry from: stavros.zavrakas.gr");
     	});
