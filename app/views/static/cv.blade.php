@@ -23,13 +23,13 @@
         <h3 class="text-muted">+39 3898 478 918</h3>
         <h3 class="text-muted">+30 6974 991 412</h3>
 
+        <!--
         <br>
-        
         <h2 class="shadow"><i class="glyphicon glyphicon-envelope"></i> e-mail</h2>
-        <h3 class="text-muted"><a href="mailto:stavros@zavrakas.me">stavros@zavrakas.me</a></h3>
+        <h3 class="text-muted"><a href="mailto:stavros@zavrakas.me">stavros@zavrakas</a></h3>
+        -->
 
         <br>
-
         <h2 class="shadow"><i class="glyphicon glyphicon-tag"></i> Address</h2>
         <h3 class="text-muted"> 
           Viale Suzzani, 18<br>
@@ -38,12 +38,18 @@
         </h3>
 
         <br>
-
         <h2 class="shadow"><i class="glyphicon glyphicon-comment"></i> Social</h2>
         <h3 class="text-muted"> 
-          Facebook, LinkedIn
+          <div class="social-buttons">
+            <a href="https://www.facebook.com/stavros.zavrakas" target="_blank">
+              <img src="{{ asset('assets/images/facebook.png') }}" alt="Stavros Zavrakas facebook">
+            </a>
+            <a href="https://www.linkedin.com/profile/view?id=140139974" target="_blank">
+              <img src="{{ asset('assets/images/linkedin.png') }}" alt="Stavros Zavrakas linkedIn">
+            </a>
+          </div>
+          <div class="fb-like" data-href="http://stavros.zavrakas.gr" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         </h3>
-        <div class="fb-like" data-href="http://stavros.zavrakas.gr" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
       </div>
     </div>
     <div class="col-md-9 col-md-9-custom col-md9-shadow">
