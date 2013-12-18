@@ -254,7 +254,7 @@
             </div>
             <div class="control-group">
               <div class="controls">
-                <input id="email_copy" name="email_copy" type="checkbox" value="0">
+                <input id="email_copy" name="email_copy" type="checkbox" value=true>
                 <label for="email_copy"> Send me a copy of the message to my email address</label>
 
                 {{ Form::captcha() }}

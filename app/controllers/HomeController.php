@@ -32,7 +32,7 @@ class HomeController extends BaseController {
 
 		// Build the validation constraint set.
 		$rules = array(
-			'name' => 'alpha_num|min:5',
+			'name' => 'min:5',
 			'email' => 'email',
 			'message' => 'min:15',
 		);
@@ -57,8 +57,10 @@ class HomeController extends BaseController {
 	    Mail::send('emails.contact', $data, function($messageToSent) use ($toEmail, $toName, $fromEmail, $fromName) {
         $messageToSent->to($toEmail, $toName);
 
-        $messageToSent->from($fromEmail, $fromName);
-
+        if(!empty($data['email_copy'])) {
+          $messageToSent->from($fromEmail, $fromName);
+        }
+        
         $messageToSent->subject("New Enquiry from: stavros.zavrakas.gr");
     	});
 
