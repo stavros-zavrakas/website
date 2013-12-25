@@ -75,24 +75,46 @@
       <h1 class="tag blue-tag">Previous employment</h1>
       <div class="header">
         <h2>Rectorate Uni. of Crete</h2> 
-        <h3 class="text-muted"> January 2012 - July 2012</h3>
+        <?php
+          $haemaStart = new DateTime('01.01.2012');
+          // $today = new DateTime('00:00:00'); - use this for the current date
+          $haemaFinish = new DateTime('01.07.2012'); // for testing purposes
+
+          $diff = $haemaFinish->diff($haemaStart);
+        ?>
+        <h3 class="text-muted"> January 2012 - July 2012 [{{$diff->m}} months]</h3>
+
       </div>
       <h4 class="position"><sub>Web Developer<sub></h4><br>
-      Analysis, design and implementation of web application of statistical analysis for the disease of Idiopathic Thrombocytopenic Purpura (I.T.P.) behalf of the Greek Haematology Society
-      
+      Analysis, design and implementation of web application of statistical analysis for the disease of Idiopathic Thrombocytopenic Purpura (I.T.P.) behalf of the Greek Haematology Society. <br><br>
+      I worked as a Web developer. We had to build an application that the doctors will be able to insert new patients in the database and every specific period of time to insert new check-ups 
+      about the patients. It is a completely hand-coded php based application. 
+      <br><br>
+      <a href="http://aemonas.admin.uoc.gr/haema/index.php?signIn=1" target="_blank">Demo application</a>
       <hr>
 
       <div class="header">
         <h2>Styloola</h2> 
-        <h3 class="text-muted"> July 2012 - Present</h3>
+        <?php
+          $styloolaStart = new DateTime('14.07.2012');
+          // $today = new DateTime('00:00:00'); - use this for the current date
+          $today = date("D M j G:i:s T Y");
+          $today = new DateTime($today); // for testing purposes
+
+          $diff = $today->diff($styloolaStart);
+        ?>
+        <h3 class="text-muted"> July 2012 - Present [ <?php printf('%d year(s), %d month(s), %d day(s)', $diff->y, $diff->m, $diff->d); ?> ]</h3>
       </div>
       <h4 class="position"><sub>Lead developer at Styloola<sub></h4><br>
-      I start working in the company as Web Developer. My first position was to continue maintaining the Styloola iOS application that was written on PhoneGap. 
-      After the decision not to continue maintaining the PhoneGap application I was moved to maintain Drupal 6 website. Developing both sides of backend part and frontend part.
-      The next step was to make to migration from Drupal 6 to Drupal 7. I was working to convert the part Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7.
+      I start working in the company as Web Developer. <br><br>
+      My first position was to continue maintaining the Styloola iOS application that was written on PhoneGap. <br><br>
+      After the decision not to continue maintaining the PhoneGap application I was moved to maintain the Drupal 6 website. Developing both sides of backend part and frontend part. <br><br>
+      The next step was to make to migration from Drupal 6 to Drupal 7. I was working to convert the part Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7. <br><br>
       The next step was to completely trash the Drupal 7 as our system and to create our architecture from scratch. That project was assigned to me and I had to manage a team 
       of six people and leading them to build from scratch the whole Web Client and the API.
 
+      <br><br>
+      <a href="https://www.styloola.com" target="_blank">Styloola Website</a>
       <div class="clear"></div>
 
       <!-- Second Label - Professional skills -->
