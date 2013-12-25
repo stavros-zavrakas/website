@@ -87,7 +87,11 @@
         <h3 class="text-muted"> July 2012 - Present</h3>
       </div>
       <h4 class="position"><sub>Lead developer at Styloola<sub></h4><br>
-      Managing a team of six people and leading them to build from scratch the whole Web Client and the API.
+      I start working in the company as Web Developer. My first position was to continue maintaining the Styloola iOS application that was written on PhoneGap. 
+      After the decision not to continue maintaining the PhoneGap application I was moved to maintain Drupal 6 website. Developing both sides of backend part and frontend part.
+      The next step was to make to migration from Drupal 6 to Drupal 7. I was working to convert the part Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7.
+      The next step was to completely trash the Drupal 7 as our system and to create our architecture from scratch. That project was assigned to me and I had to manage a team 
+      of six people and leading them to build from scratch the whole Web Client and the API.
 
       <div class="clear"></div>
 
