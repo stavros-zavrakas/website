@@ -39,4 +39,48 @@ class AuthController extends BaseController {
 		return View::make('auth.facebook')->with($data);
 	}
 
+	public function google() {
+		$data = array();
+
+		$client = new oauth_client_class;
+		$client->server = 'Google';
+
+		// set the offline access only if you need to call an API
+		// when the user is not present and the token may expire
+		$client->offline = true;
+
+		$client->debug = false;
+		$client->debug_http = true;
+		$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'] . '/auth/google';
+
+		$client->client_id = Config::get('basic.Google_appId');
+		$client->client_secret = Config::get('basic.Google_secret');
+
+		$client->scope = 'https://www.googleapis.com/auth/userinfo.email '. 'https://www.googleapis.com/auth/userinfo.profile';
+		if(($success = $client->Initialize()))
+		{
+			if(($success = $client->Process()))
+			{
+				if(strlen($client->authorization_error))
+				{
+					$client->error = $client->authorization_error;
+					$success = false;
+				}
+				elseif(strlen($client->access_token))
+				{
+					$success = $client->CallAPI(
+						'https://www.googleapis.com/oauth2/v1/userinfo',
+						'GET', array(), array('FailOnAccessError'=>true), $user);
+				}
+			}
+			$success = $client->Finalize($success);
+		}
+
+		if($client->exit)
+			exit;
+
+	    $data['user'] = $user;
+
+		return View::make('auth.facebook')->with($data);
+	}
 }
