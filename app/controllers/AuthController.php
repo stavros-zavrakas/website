@@ -11,8 +11,8 @@ class AuthController extends BaseController {
 	    $client->server = 'Facebook';
 	    $client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'] . '/auth/facebook';
 
-	    $client->client_id = '124572021287';
-	    $client->client_secret = '66f1bcaa7746b0cae0ccc07e475c5897';
+	    $client->client_id = Config::get('basic.FB_appId');
+	    $client->client_secret = Config::get('basic.FB_secret');
 
 	    // API permissions
 	    $client->scope = 'email, user_birthday, user_about_me, user_likes, publish_actions';
