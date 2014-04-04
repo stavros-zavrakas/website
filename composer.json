@@ -5,8 +5,22 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.0.*",
-		"greggilbert/recaptcha": "1.0.6"
+		"greggilbert/recaptcha": "1.0.6",
+        "nategood/httpful": "*",
+		"phpclasses/sasl": ">=1.0.0",
+		"phpclasses/httpclient": ">=1.0.0",
+		"phpclasses/oauth-api": ">=1.0.11"
 	},
+	"repositories":
+	[
+		{
+			"type": "composer",
+			"url": "http:\/\/www.phpclasses.org\/"
+		},
+		{
+			"packagist": false
+		}
+	],
 	"autoload": {
 		"classmap": [
 			"app/commands",
