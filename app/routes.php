@@ -24,3 +24,4 @@ Route::post('/contact', 'HomeController@contact');
 // ##################################
 Route::get('/auth/facebook', 'AuthController@facebook');
 Route::get('/auth/google', 'AuthController@google');
+Route::get('/auth/linkedin', 'AuthController@linkedin');

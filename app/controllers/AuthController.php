@@ -83,4 +83,48 @@ class AuthController extends BaseController {
 
 		return View::make('auth.facebook')->with($data);
 	}
+
+	public function linkedin() {
+		$client = new oauth_client_class;
+		// $client->debug = 1;
+		// $client->debug_http = 1;
+		$client->server = 'LinkedIn';
+		$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'] . '/auth/linkedin';
+
+		$client->client_id = Config::get('basic.LinkedIn_appId');
+		$client->client_secret = Config::get('basic.LinkedIn_secret');
+
+		$client->scope = 'r_fullprofile r_emailaddress';
+
+		if(($success = $client->Initialize()))
+		{
+			if(($success = $client->Process()))
+			{
+				if(strlen($client->access_token))
+				{
+					$success = $client->CallAPI(
+						'http://api.linkedin.com/v1/people/~', 
+						'GET', array(
+							'format'=>'json'
+						), array('FailOnAccessError'=>true), $user);
+				}
+			}
+			$success = $client->Finalize($success);
+		}
+		if($client->exit)
+			exit;
+
+		if(strlen($client->authorization_error))
+		{
+			$client->error = $client->authorization_error;
+			$success = false;
+		}
+
+		if($success)
+		{
+		    $data['user'] = $user;
+
+			return View::make('auth.facebook')->with($data);
+		}
+	}
 }
