@@ -21,8 +21,8 @@
       <div class="personal-data">
         <h2 class="shadow"><i class="glyphicon glyphicon-phone"></i> Phone</h2>
         <h3 class="text-muted">
-          +39 3898 478 918 <br>
-          +30 6974 991 412
+          +39 3898 478 918 (IT) <br>
+          +30 6974 991 412 (GR)
         </h3>
 
         <!--
@@ -72,9 +72,19 @@
 
       </div>
       <!-- First Label - Work experience -->
+      <h1 class="tag blue-tag">Summary</h1>
+      <ul>
+      <li>My name is Stavros Zavrakas, I am from Greece and currently I live and work in Milan, Italy.</li>
+      <li>I am passionate about Web Development.</li>
+      <li>I am passionate with my work and when it comes to deliver the final project it has to be perfect! </li>
+      <li>I am a team-player that respects the rest of the team and at the same time I am trying to lead my team to achieve the best results.</li>
+      <li>I can adapt very fast in new groups and environments.</li>
+      <li>I love and enjoy building applications being part of a team and at the end delivering the application that everybody of the team will be be proud of. </li>
+      </ul>
+      <!-- First Label - Work experience -->
       <h1 class="tag blue-tag">Previous employment</h1>
       <div class="header">
-        <h2>Rectorate Uni. of Crete</h2> 
+        <h2>Web Developer @ Rectorate Uni. of Crete</h2><br>
         <?php
           $haemaStart = new DateTime('01.01.2012');
           // $today = new DateTime('00:00:00'); - use this for the current date
@@ -82,19 +92,18 @@
 
           $diff = $haemaFinish->diff($haemaStart);
         ?>
-        <h3 class="text-muted"> January 2012 - July 2012 [{{$diff->m}} months]</h3>
+        <h3 class="text-muted"> January 2012 - July 2012 <small>[{{$diff->m}} months]</small></h3>
 
       </div>
-      <h4 class="position"><sub>Web Developer<sub></h4><br>
       Analysis, design and implementation of web application of statistical analysis for the disease of Idiopathic Thrombocytopenic Purpura (I.T.P.) behalf of the Greek Haematology Society. <br><br>
-      I worked as a Web developer. We had to build an application that the doctors will be able to insert new patients in the database and every specific period of time to insert new check-ups 
-      about the patients. It is a completely hand-coded php based application. 
+      I worked as a Web developer. We had to build an application that the doctors would be able to insert new patients in the database and every specific period of time to insert new check-ups 
+      about the patients. It is a completely hand-coded php based application using other web technologies such as javascript, jquery, mysql etc. 
       <br><br>
       <a href="http://aemonas.admin.uoc.gr/haema/index.php?signIn=1" target="_blank">Demo application</a>
       <hr>
 
       <div class="header">
-        <h2>Styloola</h2> 
+        <h2>Lead developer @ Styloola</h2><br>
         <?php
           $styloolaStart = new DateTime('14.07.2012');
           // $today = new DateTime('00:00:00'); - use this for the current date
@@ -103,15 +112,14 @@
 
           $diff = $today->diff($styloolaStart);
         ?>
-        <h3 class="text-muted"> July 2012 - Present [ <?php printf('%d year(s), %d month(s), %d day(s)', $diff->y, $diff->m, $diff->d); ?> ]</h3>
+        <h3 class="text-muted"> July 2012 - Present <small>[ <?php printf('%d year(s), %d month(s), %d day(s)', $diff->y, $diff->m, $diff->d); ?> ]</small></h3>
       </div>
-      <h4 class="position"><sub>Lead developer at Styloola<sub></h4><br>
       I start working in the company as Web Developer. <br><br>
       My first position was to continue maintaining the Styloola iOS application that was written on PhoneGap. <br><br>
-      After the decision not to continue maintaining the PhoneGap application I was moved to maintain the Drupal 6 website. Developing both sides of backend part and frontend part. <br><br>
-      The next step was to make to migration from Drupal 6 to Drupal 7. I was working to convert the part Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7. <br><br>
+      After the decision not to continue maintaining the PhoneGap application, I was moved to maintain the Drupal 6 website. Developing both sides of backend part and frontend part. <br><br>
+      The next step was to make the migration from Drupal 6 to Drupal 7. I was working to convert part of the Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7. <br><br>
       The next step was to completely trash the Drupal 7 as our system and to create our architecture from scratch. That project was assigned to me and I had to manage a team 
-      of six people and leading them to build from scratch the whole Web Client and the API.
+      of seven people and leading them to build from scratch the whole Web Client (Laravel) and the API (node.js + mongodb). After this point I have in the company the position of Lead Developer.
 
       <br><br>
       <a href="https://www.styloola.com" target="_blank">Styloola Website</a>
@@ -119,7 +127,6 @@
 
       <!-- Second Label - Professional skills -->
       <h1 class="tag green-tag">Professional skills</h1>
-      <p>Below you can find all my professional skills</p>
       <div class="table-responsive">
         <table class="table table-striped">
           <!-- On rows -->
@@ -132,8 +139,10 @@
           <tr><td>JavaScript                   </td>    <td>MySql                  </td></tr>
           <tr><td>PHP                          </td>    <td>MVC                    </td></tr>
           <tr><td>Laravel                      </td>    <td>C                      </td></tr>
+          <tr><td>Debug                        </td>    <td>ElasticSearch          </td></tr>
           <tr><td>REST                         </td>    <td>Java                   </td></tr>
-          <tr><td>Web Applications             </td>    <td>                       </td></tr>
+          <tr><td>Web Applications             </td>    <td>Facebook API           </td></tr>
+          <tr><td>Google API                   </td>    <td>                       </td></tr>
           <tr><td>                             </td>    <td>                       </td></tr>
           <tr><th>Leadership                   </th>    <th>Languages              </th></tr> <!-- Headers -->
           <tr><td>Agile Methodologies          </td>    <td>Greek - Mother Tongue  </td></tr>
