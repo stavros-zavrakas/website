@@ -58,7 +58,7 @@
       <div class="header">
         <h3>
           <i class="glyphicon glyphicon-floppy-save"></i>
-          <button type="button" class="btn btn-danger btn-sm" onclick="window.print()">Download CV</button>
+          <a class="btn btn-danger btn-sm" href="{{ asset('assets/files/Curriculum_Vitae.pdf') }}" target="_blank">Download CV</a>
         </h3> 
         <h3 class="hidden-sm hidden-xs pull-left">
           <i class="glyphicon glyphicon glyphicon-print"></i>
@@ -140,7 +140,7 @@
       ‘to verify’ and ‘done’ system to easily manage our tasks.
       <p class="text-ident">
       We completed this project after two months and it is currently the infrastructure of the entirety of 
-      the companys online platforms (website, REST API, Android Application) As a result of my work in this 
+      the companys online platforms (Website, Business website, REST API, Android Application) As a result of my work in this 
       I was promoted to Lead Developer in Styloola.  
       <p class="text-ident">
       One of the projects of Styloola is to create some hardware devices (routers) that are used to profile customers 
