@@ -29,7 +29,8 @@
   body { background: url(../images/bg1.png); }
   hr { border: 0 none; border-bottom: 3px dashed #999; }
 
-  .clear { clear: both;}
+  .text-ident { text-indent:2em; }
+  .clear { clear: both; }
 
   /*
   |--------------------------------------------------------------------------

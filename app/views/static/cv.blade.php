@@ -56,7 +56,7 @@
     </div>
     <div class="col-md-9 col-md-9-custom col-md9-shadow">
       <div class="header">
-        <h3 class="hidden">
+        <h3>
           <i class="glyphicon glyphicon-floppy-save"></i>
           <button type="button" class="btn btn-danger btn-sm" onclick="window.print()">Download CV</button>
         </h3> 
@@ -73,13 +73,12 @@
       </div>
       <!-- First Label - Work experience -->
       <h1 class="tag blue-tag">Summary</h1>
-      <ul>
-      <li>My name is Stavros Zavrakas, I am from Greece and currently I live and work in Milan, Italy.</li>
-      <li>I determine myself as a Full Stack Developer.</li>
-      <li>I am passionate with my work and when it comes to deliver the final project it has to be perfect! </li>
-      <li>I am a team-player that respects the rest of the team.</li>
-      <li>I can adapt very fast in new groups and environments.</li>
-      <li>I love and enjoy building applications being part of a team and at the end delivering the application that everybody of the team will be be proud of. </li>
+      <ul>  
+        <li>My name is Stavros Zavrakas, I am from Greece and currently I live and work in Milan, Italy.</li>
+        <li>I identify myself as a Full Stack Developer.</li>
+        <li>I am a perfectionist when it comes to my work and when it comes to delivering the final project I ensure that it is at a high standard and something I will be proud of.</li>
+        <li>I enjoy working in a team, and am a strong team-player. I can adapt very fast and easily in new groups, situations and environments.</li>
+        <li>I am passionate hard working and enjoy building applications, being part of a team and delivering a product that reflects my strong work ethic and skill that both I and my team can be proud of.</li>
       </ul>
       <!-- First Label - Work experience -->
       <h1 class="tag blue-tag">Work experience</h1>
@@ -95,11 +94,18 @@
         <h3 class="text-muted"> January 2012 - July 2012 <small>[{{$diff->m}} months]</small></h3>
 
       </div>
-      Analysis, design and implementation of web application of statistical analysis for the disease of Idiopathic Thrombocytopenic Purpura (I.T.P.) behalf of the Greek Haematology Society. <br><br>
-      I worked as a Web developer. We had to build an application that the doctors would be able to insert new patients in the database and every specific period of time to insert new check-ups 
-      about the patients. The users of the platform (doctors) are able to view statistic results about specific treatments on patients that are helpful to follow better 
-      prescription treatment. It is a completely hand-coded php based application using other web technologies such as javascript, jquery, mysql etc. 
-      <br><br>
+        <p class="text-ident">
+        Analysis, design and implementation of web application, of statistical analysis for the disease of 
+        Idiopathic Thrombocytopenic Purpura (I.T.P.) on behalf of the Greek Haematology Society.
+        <p class="text-ident">
+        In this project I worked as a Web developer, where I had to build an application for the doctors, 
+        to enable them to insert new patients into the database, and from a specific time schedule insert 
+        new information and check-ups about the patients.
+        My project allows Doctors to be able to view statistic results about specific treatments on patients, 
+        that helps them follow better prescribed treatment and aftercare.
+        <p class="text-ident">
+        It is a completely hand-coded php based application using other web technologies such as javascript, jquery, mysql etc. 
+        <br><br>
       <a href="http://aemonas.admin.uoc.gr/haema/index.php?signIn=1" target="_blank">Demo application</a>
       <hr>
 
@@ -115,30 +121,31 @@
         ?>
         <h3 class="text-muted"> July 2012 - Present <small>[ <?php printf('%d year(s), %d month(s), %d day(s)', $diff->y, $diff->m, $diff->d); ?> ]</small></h3>
       </div>
-      My first position was to continue maintaining the Styloola iOS application that was written 
-      on PhoneGap. The technologies that we used was jQuery, jQuery mobile and HTML.
-      <br><br>
-      After the decision to drop the PhoneGap application and to develop a native iOs application, 
-      I was moved to maintain the Drupal 6 website. Developing both sides of backend part and 
-      frontend part. 
-      <br><br>
-      One of the projects was move from from Drupal 6 to Drupal 7 and my job was to convert part 
-      of the Web Services and to create scripts to migrate the data of Drupal 6 to Drupal 7. 
-      <br><br>
-      The next step was to move out of Drupal and to create our architecture from scratch. That 
-      project was assigned to me and I had to manage a team of seven people and leading them to build 
-      from scratch the whole Web Client (Laravel, jQuery, Bootstrap), the REST API (node.js + mongodb), the first 
-      Android application of the company and testing some parts of REST API (mocha). The team 
-      was consisting of two backend developers, two frontend developers, one android developer, 
-      one system adminitrator and one tester. I was using scrum methodologies to lead the process, having daily
-      standup meetings that everybody was reporting his progress and we were using backlog. 
-      <br><br>
-      The project delivered after two months of work and right now is the current infrustructure of the company.
-      After this point I have in the company the position of Lead Developer
-      <br><br>
-      One of the projects of the company is to create some hardware devices (routers) that are used
-      to profile customers and are helpful for retailers. I had to develop part of the router
-      developing some scripts in C. The firmware that we use is OpenWrt 
+      
+      <p class="text-ident">
+      My first position was to continue maintaining the Styloola iOS application that was written on PhoneGap. 
+      The technologies that we used was jQuery, jQuery mobile and HTML. 
+      <p class="text-ident">
+      I was moved to maintain the Drupal 6 website. Developing both sides of backend part and frontend part. 
+      One of the projects was move from from Drupal 6 to Drupal 7 and my job was to convert part of the Web 
+      Services and to create scripts to migrate the data of Drupal 6 to Drupal 7. 
+      <p class="text-ident">
+      The next step was to move out of Drupal and to create our architecture from scratch. That project was 
+      assigned to me and I had to manage a team of seven people, leading them to build the whole Web Client 
+      (Laravel, jQuery, Bootstrap), the REST API (node.js + mongodb), the first Android application of the 
+      company and testing some parts of REST API (mocha). The team consisted of two backend developers, two 
+      frontend developers, one android developer, one system administrator and one tester. I was using scrum 
+      methodologies to lead the process, managed daily standup meetings where everybody reported their progress 
+      to me. This was assisted by a backlog tool that I implemented where we had a ‘to do’, ‘in progress’, 
+      ‘to verify’ and ‘done’ system to easily manage our tasks.
+      <p class="text-ident">
+      We completed this project after two months and it is currently the infrastructure of the entirety of 
+      the companys online platforms (website, REST API, Android Application) As a result of my work in this 
+      I was promoted to Lead Developer in Styloola.  
+      <p class="text-ident">
+      One of the projects of Styloola is to create some hardware devices (routers) that are used to profile customers 
+      and are helpful for retailers. I have developed part of the router developing some scripts in C. The firmware 
+      that we use is OpenWrt.
       <br><br>
       <a href="https://www.styloola.com" target="_blank">Styloola Website</a> 
       <b> - </b> 
